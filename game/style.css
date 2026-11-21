@@ -1,0 +1,29 @@
+/* Night Parcel page chrome: dark backdrop, centered canvas. */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #070a14;
+  color: #e8ecf5;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main { text-align: center; padding: 12px; }
+canvas {
+  display: block;
+  width: min(1200px, 96vw);
+  height: auto;
+  background: #10141f;
+  border: 2px solid #2a3350;
+  border-radius: 8px;
+  image-rendering: auto;
+}
+.help {
+  max-width: 960px;
+  margin: 10px auto 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #b9c2d8;
+}
