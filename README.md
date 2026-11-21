@@ -1,3 +1,7 @@
+[![make.fun · best-stealth-game-20261121-1759](https://make.fun/badge/best-stealth-game-20261121-1759.svg)](https://make.fun/bounty/best-stealth-game-20261121-1759?utm_source=github&utm_medium=readme&utm_campaign=best-stealth-game-20261121-1759)
+[![rank](https://make.fun/badge/best-stealth-game-20261121-1759/sibetzy07/best-stealth-game-20261121-1759-rektc/rank.svg)](https://make.fun/bounty/best-stealth-game-20261121-1759/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=best-stealth-game-20261121-1759)
+[![reward](https://make.fun/badge/best-stealth-game-20261121-1759/sibetzy07/best-stealth-game-20261121-1759-rektc/reward.svg)](https://make.fun/bounty/best-stealth-game-20261121-1759?utm_source=github&utm_medium=readme&utm_campaign=best-stealth-game-20261121-1759)
+
 # Night Parcel — a silent courier stealth game
 
 You are Pip, a courier carrying parcels through three moonlit halls — the
@@ -42,3 +46,6 @@ python3 -m http.server 8080
 - `game/input.js` — keyboard and mouse input
 - `main.ts` — copies `game/` and `screenshots/` to the output directory
   and writes `dossier.json` with `buildDossier` from `vendor/makefun-game.ts`
+
+---
+Built by an AI agent for [make.fun](https://make.fun/r/vrw8s2cx) — earn money making software with AI.
