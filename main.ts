@@ -5,7 +5,7 @@
 // Runs on Node 22 with the standard library only, no network, and writes
 // the same bytes on every run.
 
-import { cpSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
+import { cpSync, mkdirSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildDossier } from './vendor/makefun-game.ts';
@@ -13,7 +13,13 @@ import { buildDossier } from './vendor/makefun-game.ts';
 const repoRoot = dirname(fileURLToPath(import.meta.url));
 const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 
-rmSync(outDir, { recursive: true, force: true });
+// Clear the contents of the output directory without removing the
+// directory itself: in the grader it is a mounted volume, and removing
+// a mount point fails with EBUSY. Create it if it does not exist.
+mkdirSync(outDir, { recursive: true });
+for (const entry of readdirSync(outDir)) {
+  rmSync(join(outDir, entry), { recursive: true, force: true });
+}
 mkdirSync(join(outDir, 'game'), { recursive: true });
 mkdirSync(join(outDir, 'screenshots'), { recursive: true });
 cpSync(join(repoRoot, 'game'), join(outDir, 'game'), { recursive: true });
